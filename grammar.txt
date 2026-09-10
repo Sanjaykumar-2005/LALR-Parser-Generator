@@ -1,0 +1,10 @@
+# grammar.txt - the classic LALR example (Aho/Sethi/Ullman).
+# Canonical LR(1) builds 10 states; they collapse onto 7 LR(0) cores,
+# so LALR(1) has 7 states.  Nothing below is known to lalr_gen.c:
+# S and C are non-terminals only because they appear on a left-hand side,
+# and c and d are terminals only because they never do.
+
+%start S
+
+S -> C C
+C -> c C | d

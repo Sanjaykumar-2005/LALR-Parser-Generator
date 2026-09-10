@@ -1,0 +1,23 @@
+# Build output - lalr_gen.exe on Windows, lalr_gen elsewhere.
+lalr_gen
+lalr_gen.exe
+*.o
+*.obj
+*.out
+*.exe
+
+# Saved reports, e.g.  ./lalr_gen expr.txt > expr_report.txt
+*_report.txt
+conflicts.txt
+
+# Local working notes, not part of the deliverable
+CLAUDE.md
+
+# Editor / OS clutter
+.vscode/
+.idea/
+*.swp
+*~
+Thumbs.db
+desktop.ini
+.DS_Store

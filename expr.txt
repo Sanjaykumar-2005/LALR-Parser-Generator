@@ -1,0 +1,11 @@
+# expr.txt - the usual expression grammar, read by the SAME binary that
+# reads grammar.txt: no recompilation, no switch, nothing declared.
+# 'id' shows that a terminal name may be more than one character long -
+# the tokeniser finds it by longest match over the terminal set.
+# Canonical LR(1): 22 states;  LR(0) cores: 12  (= LALR(1) states).
+
+%start E
+
+E -> E + T | T
+T -> T * F | F
+F -> ( E ) | id
